@@ -1,0 +1,59 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .details {
+            margin: auto;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resume Details</h1>
+    <div class="details">
+        <h2>{{ resume.Name }}</h2>
+        <p><strong>Email:</p>
+        <p><strong>Email:</strong> {{ resume.Email }}</p>
+        <p><strong>Phone:</strong> {{ resume.Phone }}</p>
+        <p><strong>College:</strong> {{ resume.College }}</p>
+        <p><strong>Skills:</strong> {{ resume.Skills }}</p>
+        <a class="download-btn" href="{{ url_for('download_file', filename=resume.Filename) }}">Download Resume</a>
+        </div>
+    </body>
+    </html>
+     {% endcomment %}
